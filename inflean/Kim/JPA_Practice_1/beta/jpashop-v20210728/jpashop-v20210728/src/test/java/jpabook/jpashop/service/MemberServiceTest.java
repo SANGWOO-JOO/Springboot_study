@@ -29,11 +29,9 @@ public class MemberServiceTest {
         member.setName("kim");
 
         //when
-        //service에서 저장한 멤버
         Long savedId = memberService.join(member);
 
         //then
-        //repo에서 찾은 멤버랑  service에서 저장한 멤버 판별
         assertEquals(member, memberRepository.findOne(savedId));
     }
 
