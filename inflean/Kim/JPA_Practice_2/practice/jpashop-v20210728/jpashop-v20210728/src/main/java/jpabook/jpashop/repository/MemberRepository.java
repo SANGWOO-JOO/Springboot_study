@@ -14,7 +14,7 @@ public class MemberRepository {
     private final EntityManager em;
 
     public void save(Member member) {
-        em.persist(member);
+        em.persist(member); // 엔티티 저장
     }
 
     public Member findOne(Long id) {
@@ -27,6 +27,8 @@ public class MemberRepository {
     }
 
     public List<Member> findByName(String name) {
+        /* 메소드 체인 방식 사용 */
+        //Member result = em.createQuery("select m from Member m where m.username=:username", Member.class)
         return em.createQuery("select m from Member m where m.name = :name", Member.class)
                 .setParameter("name", name)
                 .getResultList();

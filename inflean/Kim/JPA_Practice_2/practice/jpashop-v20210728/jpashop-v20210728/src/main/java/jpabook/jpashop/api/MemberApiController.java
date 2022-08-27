@@ -39,8 +39,11 @@ public class MemberApiController {
      * 수정 API
      */
     @PutMapping("/api/v2/members/{id}")
-    public UpdateMemberResponse updateMemberV2(@PathVariable("id") Long id,
+    //식별자 PathVariable
+    //최근 HTTP API는 리소스 경로에 식별자를 넣는 다음과 같은 스타일을 선호하고, 실무에서 이런 스타일의 URL 경로를 정말 많이 쓴다고 한다.
+        public UpdateMemberResponse updateMemberV2(@PathVariable("id") Long id,
                                                @RequestBody @Valid UpdateMemberRequest request) {
+        //void로 반환
         memberService.update(id, request.getName());
         Member findMember = memberService.findOne(id);
         return new UpdateMemberResponse(findMember.getId(), findMember.getName());
