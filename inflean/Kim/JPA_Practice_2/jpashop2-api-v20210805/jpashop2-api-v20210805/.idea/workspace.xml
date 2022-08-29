@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d1da78c-8457-45c0-bd8e-298208b44d7c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../practice/jpashop-v20210728/jpashop-v20210728/src/main/java/jpabook/jpashop/api/MemberApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/jpashop-v20210728/jpashop-v20210728/src/main/java/jpabook/jpashop/api/MemberApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../practice/jpashop-v20210728/jpashop-v20210728/src/main/java/jpabook/jpashop/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/jpashop-v20210728/jpashop-v20210728/src/main/java/jpabook/jpashop/domain/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../practice/jpashop-v20210728/jpashop-v20210728/src/main/java/jpabook/jpashop/repository/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/jpashop-v20210728/jpashop-v20210728/src/main/java/jpabook/jpashop/repository/MemberRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../practice/jpashop-v20210728/jpashop-v20210728/src/main/java/jpabook/jpashop/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/jpashop-v20210728/jpashop-v20210728/src/main/java/jpabook/jpashop/service/MemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/jpashop-v20210728/jpashop-v20210728/src/main/java/jpabook/jpashop/InitDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/jpashop-v20210728/jpashop-v20210728/src/main/java/jpabook/jpashop/InitDb.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +54,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../practice/jpashop-v20210728/jpashop-v20210728" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../practice/jpashop-v20210728" />
   </component>
   <component name="RunManager" selected="Spring Boot.JpashopApplication">
     <configuration name="MemberServiceTest.회원가입" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -125,6 +122,7 @@
       <workItem from="1661497161939" duration="4237000" />
       <workItem from="1661505587207" duration="633000" />
       <workItem from="1661611421435" duration="139000" />
+      <workItem from="1661758949192" duration="122000" />
     </task>
     <servers />
   </component>
