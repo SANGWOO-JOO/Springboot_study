@@ -14,9 +14,9 @@ public class UserDaoService {
     private static int userCount =3;
 
     static{
-        users.add(new User(1,"Kenneth",new Date(),"123123","701010"));
-        users.add(new User(2,"Alice",new Date(),"123123","701010"));
-        users.add(new User(3,"Depth",new Date(),"123123","701010"));
+        users.add(new User(1,"Kenneth",new Date()));
+        users.add(new User(2,"Alice",new Date()));
+        users.add(new User(3,"Depth",new Date()));
     }
 
     public List<User> findAll(){
@@ -25,7 +25,7 @@ public class UserDaoService {
 
     public User save(User user){
         if(user.getId()==null){
-            user.setId(++userCount);
+                user.setId(++userCount);
         }
         users.add(user);
         return user;
