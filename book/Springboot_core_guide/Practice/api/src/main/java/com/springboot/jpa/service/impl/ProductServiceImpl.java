@@ -22,6 +22,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     // 예제 6.23
+    //조회 메서드
+
     @Override
     public ProductResponseDto getProduct(Long number) {
         Product product = productDAO.selectProduct(number);
@@ -48,6 +50,7 @@ public class ProductServiceImpl implements ProductService {
         Product savedProduct = productDAO.insertProduct(product);
 
         ProductResponseDto productResponseDto = new ProductResponseDto();
+        //savedProduct 저장 save()
         productResponseDto.setNumber(savedProduct.getNumber());
         productResponseDto.setName(savedProduct.getName());
         productResponseDto.setPrice(savedProduct.getPrice());
