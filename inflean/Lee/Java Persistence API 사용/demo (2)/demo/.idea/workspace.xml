@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2cae812-3d74-44c6-a977-262f29127ad8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../../../book/Springboot_core_guide/Practice/api/src/main/java/com/springboot/jpa/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../book/Springboot_core_guide/Practice/api/src/main/java/com/springboot/jpa/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../ocw/kit/JPA/study/study/src/main/resources/application.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +82,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Kim/SpringMVC_1/SpringMVC_스프링 MVC - 구조 이해" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../RESTful Service 기능 확장/demo" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
   </component>
   <component name="RecentsManager">
@@ -118,6 +118,7 @@
       <workItem from="1662284050249" duration="1217000" />
       <workItem from="1662530649958" duration="3728000" />
       <workItem from="1662632533410" duration="463000" />
+      <workItem from="1662881627186" duration="19000" />
     </task>
     <servers />
   </component>
