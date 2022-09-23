@@ -7,12 +7,12 @@ import org.springframework.hateoas.server.mvc.ControllerLinkRelationProvider;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.hateoas.server.reactive.WebFluxLinkBuilder;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.hateoas.Resource;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+
+import javax.validation.Valid;
+import java.net.URI;
 import java.util.List;
 import java.util.Optional;
 
@@ -47,6 +47,23 @@ public class UserJpaController {
         userModel.add(linkTo.withRel("all-users"));
 
         return userModel;
+    }
+
+    @DeleteMapping("/users/{id}")
+    public void deleteUser(@PathVariable int id){
+        userRepository.deleteById(id); // 기본키로 id 삭제
+    }
+
+    @PostMapping("/users")
+    //ResponseEntity<>: 사용자에게 상태코드 반영해서 적용
+    public ResponseEntity<User> createUser(@Valid @RequestBody User user){
+       User savedUser = userRepository.save(user); // 도메인 객체를 전달
+
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest()
+                .path("/{id}") // 현재 생성되어 있는 id 값에
+                .buildAndExpand(savedUser.getId()) //savedUser.getId() : {id} 가변변수에 새롭게 만들어진 id값 저장
+                .toUri();
+        return ResponseEntity.created(location).build();//.build() 메소드 붙히기
     }
 
 }
