@@ -10,9 +10,7 @@ import Rest.API.demo.model.response.SingleResult;
 import Rest.API.demo.repository.UserRepo;
 import Rest.API.demo.service.UserService;
 import Rest.API.demo.service.response.ResponseService;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
+import io.swagger.annotations.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -27,17 +25,33 @@ import java.util.List;
 public class UserController {
 
     private final UserRepo userRepo;
-
     private final ResponseService responseService;
     private final UserService userService;
+
+    //jwt
+    @ApiImplicitParams({
+            @ApiImplicitParam(
+                    name = "X-AUTH-TOKEN",
+                    value = "로그인 성공 후 AccessToken",
+                    required = true, dataType = "String", paramType = "header")
+    })
 
 
     @ApiOperation(value = "회원 단건 검색", notes = "id로 회원을 조회합니다.")
     @GetMapping(value = "/user/{id}")
-    public SingleResult<UserResponseDto> findUserById(@ApiParam(value = "회원ID", required = true) @PathVariable long id)   {
+    public SingleResult<UserResponseDto> findUserById(
+                                                    @ApiParam(value = "회원ID", required = true) @PathVariable long id,
+                                                    @ApiParam(value = "언어", defaultValue = "ko") @RequestParam String lang)   {
         return responseService.getSingleResult(userService.findById(id));
         // 결과 데이터가 단일건인 경우 getSingleResult를 이용하여 결과를 출력
     }
+
+    @ApiImplicitParams({
+            @ApiImplicitParam(
+                    name = "X-AUTH-TOKEN",
+                    value = "로그인 성공 후 AccessToken",
+                    required = true, dataType = "String", paramType = "header")
+    })
 
     @ApiOperation(value = "회원 목록 조회", notes = "모든 회원을 조회합니다.")
     @GetMapping("/users")
@@ -45,6 +59,12 @@ public class UserController {
         return responseService.getListResult(userService.findAllUser());
     }
 
+    @ApiImplicitParams({
+            @ApiImplicitParam(
+                    name = "X-AUTH-TOKEN",
+                    value = "로그인 성공 후 AccessToken",
+                    required = true, dataType = "String", paramType = "header")
+    })
 
     @ApiOperation(value = "회원 등록", notes = "회원을 등록합니다.")
     @PostMapping(value = "/user") // user 테이블에 데이터를 입력하는 부분 insert into user (msrl, name, uid) values (null, ?, ?) 와 같음
@@ -61,6 +81,13 @@ public class UserController {
         return responseService.getSingleResult(userService.save(user));
     }
 
+    @ApiImplicitParams({
+            @ApiImplicitParam(
+                    name = "X-AUTH-TOKEN",
+                    value = "로그인 성공 후 AccessToken",
+                    required = true, dataType = "String", paramType = "header")
+    })
+
     @ApiOperation(value = "회원 수정", notes = "회원정보를 수정한다.")
     @PutMapping(value = "/user")
     public SingleResult<Long> modify(
@@ -75,6 +102,13 @@ public class UserController {
 
         return responseService.getSingleResult(userService.update(id,userRequestDto));
     }
+
+    @ApiImplicitParams({
+            @ApiImplicitParam(
+                    name = "X-AUTH-TOKEN",
+                    value = "로그인 성공 후 AccessToken",
+                    required = true, dataType = "String", paramType = "header")
+    })
 
     @ApiOperation(value = "회원 삭제", notes = "msrl로 회원정보를 삭제한다.")
     @DeleteMapping(value = "/user/{msrl}")
