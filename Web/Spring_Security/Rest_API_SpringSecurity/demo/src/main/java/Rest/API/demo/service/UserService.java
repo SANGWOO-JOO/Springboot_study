@@ -54,7 +54,8 @@ public class UserService {
         User modifiedUser = userJpaRepo
                 .findById(id).orElseThrow(CUserNotFoundException::new);
 //        modifiedUser.setNickName(userRequestDto.getNickName());
-        modifiedUser.setName(userRequestDto.toEntity().getName());
+//        modifiedUser.setid(userRequestDto.toEntity().getName());
+        modifiedUser.setUid(userRequestDto.toEntity().getUid());
         return id;
     }
 
