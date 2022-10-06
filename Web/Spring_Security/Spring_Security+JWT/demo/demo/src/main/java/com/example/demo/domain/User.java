@@ -1,5 +1,6 @@
 package com.example.demo.domain;
 
+import com.example.demo.domain.audit.DateEntity;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.NaturalId;
@@ -17,7 +18,7 @@ import java.util.Set;
 @Getter
 @Setter
 @Table(name = "users")
-public class User extends BaseEntity {
+public class User extends DateEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

@@ -10,7 +10,7 @@ import javax.management.relation.Role;
 import java.util.Optional;
 
 @Configuration
-@EnableJpaRepositories(basePackages =com.example.demo.repository.RoleRepository)
+@EnableJpaRepositories
 @Repository
 public interface RoleRepository extends JpaRepository<Role, Long> {
     Optional<Role> findByName(RoleName roleName);

@@ -1,4 +1,4 @@
-package com.example.demo.domain;
+package com.example.demo.domain.audit;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.EqualsAndHashCode;
@@ -18,7 +18,7 @@ import java.time.LocalDateTime;
         value = {"createdAt", "updatedAt"},
         allowGetters = true
 )
-public abstract class BaseEntity {
+public abstract class DateEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
