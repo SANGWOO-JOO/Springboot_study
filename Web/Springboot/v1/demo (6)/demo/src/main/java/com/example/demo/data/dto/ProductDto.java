@@ -1,6 +1,7 @@
 package com.example.demo.data.dto;
 
 
+
 import com.example.demo.data.entity.Product;
 import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
@@ -40,8 +41,13 @@ public class ProductDto {
     @Max(value = 9999)
     private int productStock;
 
-    public Product toEntity() {
-        return Product.builder().id(productId).name(productName).price(productPrice).stock(productStock).build();
+    public Product toEntity(){
+        return Product.builder()
+                .id(productId)
+                .name(productName)
+                .price(productPrice)
+                .stock(productStock)
+                .build();
     }
 
 }

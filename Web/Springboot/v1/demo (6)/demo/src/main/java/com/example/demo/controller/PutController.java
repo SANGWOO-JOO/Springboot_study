@@ -2,7 +2,7 @@ package com.example.demo.controller;
 
 import java.util.Map;
 
-import com.example.demo.dto.MemberDTO;
+import com.example.demo.data.dto.MemberDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PutMapping;

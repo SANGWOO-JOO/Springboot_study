@@ -1,7 +1,7 @@
 package com.example.demo.controller;
 import java.util.Map;
 
-import com.example.demo.dto.MemberDTO;
+import com.example.demo.data.dto.MemberDTO;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

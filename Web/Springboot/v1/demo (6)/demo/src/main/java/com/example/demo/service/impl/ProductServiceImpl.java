@@ -24,13 +24,18 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public ProductDto saveProduct(String productId, String productName, int productPrice, int productStock) {
+    public ProductDto saveProduct(String productId, String productName, int productPrice,
+                                  int productStock) {
 
         LOGGER.info("[saveProduct] productDataHandler 로 상품 정보 저장 요청");
-        Product product = productDataHandler.saveProductEntity(productId, productName, productPrice, productStock);
+        Product product = productDataHandler.saveProductEntity(productId, productName,
+                productPrice, productStock);
 
-        LOGGER.info("[saveProduct] Entity 객체를 DTO 객체로 변환 작업. productId : {}", product.getId());
-        ProductDto productDto = new ProductDto(product.getId(), product.getName(), product.getPrice(), product.getStock());
+        LOGGER.info("[saveProduct] Entity 객체를 DTO 객체로 변환 작업. productId : {}",
+                product.getId());
+        ProductDto productDto = new ProductDto(product.getId(),
+                product.getName(), product.getPrice(),
+                product.getStock());
 
         return productDto;
     }
@@ -41,8 +46,11 @@ public class ProductServiceImpl implements ProductService {
         LOGGER.info("[getProduct] productDataHandler 로 상품 정보 조회 요청");
         Product product = productDataHandler.getProductEntity(productId);
 
-        LOGGER.info("[getProduct] Entity 객체를 DTO 객체로 변환 작업. productId : {}", product.getId());
-        ProductDto productDto = new ProductDto(product.getId(), product.getName(), product.getPrice(), product.getStock());
+        LOGGER.info("[getProduct] Entity 객체를 DTO 객체로 변환 작업. productId : {}",
+                product.getId());
+        ProductDto productDto = new ProductDto(product.getId(),
+                product.getName(), product.getPrice(),
+                product.getStock());
 
         return productDto;
     }

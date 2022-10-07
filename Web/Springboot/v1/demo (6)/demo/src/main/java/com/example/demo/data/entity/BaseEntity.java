@@ -20,7 +20,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 public class BaseEntity {
 
     @CreatedDate
-    @Column(updatable = false) // 개발자가 변경을 금지하게 함
+    @Column(updatable = false)
     private LocalDateTime createdAt;
 
   /*
