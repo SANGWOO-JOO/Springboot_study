@@ -21,7 +21,7 @@ public class RequestHeaderController {
                          HttpServletResponse response,
                          HttpMethod httpMethod,
                          Locale locale,
-                         @RequestHeader MultiValueMap<String, String>
+                         @RequestHeader MultiValueMap<String, String> //MultiValueMap
                                      headerMap,
                          @RequestHeader("host") String host,
                          @CookieValue(value = "myCookie", required = false) String cookie){

@@ -38,6 +38,10 @@ public class ResponseBodyController {
         return "ok";
     }
 
+/*
+    JSON을 처리할 때
+ */
+
     @GetMapping("/response-body-json-v1")
     public ResponseEntity<HelloData> responseBodyJsonV1() {
         HelloData helloData = new HelloData();
@@ -47,12 +51,5 @@ public class ResponseBodyController {
     }
 
 
-    @ResponseStatus(HttpStatus.OK)
-    @GetMapping("/response-body-json-v2")
-    public HelloData responseBodyJsonV2() {
-        HelloData helloData = new HelloData();
-        helloData.setUsername("userA");
-        helloData.setAge(20);
-        return helloData;
-    }
+
 }
