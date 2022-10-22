@@ -1,0 +1,43 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.13'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compileOnly 'org.projectlombok:lombok'
+	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	implementation 'com.konghq:unirest-java:3.7.02' // http 통신을 쉽게 하기 위함
+
+
+
+	implementation 'org.apache.commons:commons-lang3:3.8' // 유틸리티 사용을 위함
+	implementation 'io.jsonwebtoken:jjwt:0.9.1'
+
+	dependencies { implementation 'com.google.code.gson:gson:2.8.7' }
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
