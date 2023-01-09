@@ -1,13 +1,13 @@
-package com.springboot.blog;
+package com.example.di.DI;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringbootBlogRestApiApplication {
-	
+public class DiApplication {
+
 	public static void main(String[] args) {
-		SpringApplication.run(SpringbootBlogRestApiApplication.class, args);
+		SpringApplication.run(DiApplication.class, args);
 	}
 
 }

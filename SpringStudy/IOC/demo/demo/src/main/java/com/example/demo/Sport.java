@@ -5,7 +5,7 @@ public class Sport {
     private KFA kfa;
 
     public SoccerPlayer(String name){
-        
+
     }
 
 //    public String nation(String nationalName) {

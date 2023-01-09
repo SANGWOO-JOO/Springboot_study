@@ -1,13 +1,13 @@
-package com.springboot.blog;
+package com.example.ORM.ORM;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringbootBlogRestApiApplication {
-	
+public class OrmApplication {
+
 	public static void main(String[] args) {
-		SpringApplication.run(SpringbootBlogRestApiApplication.class, args);
+		SpringApplication.run(OrmApplication.class, args);
 	}
 
 }
